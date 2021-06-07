@@ -1,0 +1,39 @@
+from flask import Flask, request
+
+from db import insertUser
+
+app = Flask("Teste")
+
+@app.route("/helloWorld", methods=["GET"])
+def helloWorld():
+	return {"Hello":"World"}
+
+@app.route("/register/user",methods=["POST"])
+def userRegister():
+
+	body= request.get_json()
+
+	if("name" not in body):
+		return responseGenerate(400,"Parameter name is mandatory!")
+	
+	if("email" not in body):
+		return responseGenerate(400,"Parameter email is mandatory!")
+
+	if("password" not in body):
+		return responseGenerate(400,"Parameter password is mandatory!")
+
+	user=  insertUser(body["name"],body["email"],body["password"])
+
+	return responseGenerate(200,"User created", "user", user)
+
+def responseGenerate(status, message, contentName=False,  content=False):
+	response = {}
+	response["status"]= status
+	response["message"] = message
+
+	if (contentName and content):
+		response[contentName] = content
+	
+	return response
+
+app.run()
