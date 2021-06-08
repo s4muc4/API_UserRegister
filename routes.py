@@ -4,6 +4,8 @@ from db import insertUser
 
 app = Flask("Teste")
 
+print("Routes rodando... ")
+
 @app.route("/", methods=["GET"])
 def main():
 	return {"message":"Hospedagem no Heroku 😎"}
