@@ -2,6 +2,10 @@ from flask import Flask, request
 
 from db import insertUser
 
+import os
+
+os.environ.get('PORT', 5000)
+
 app = Flask("Teste")
 
 print("Routes rodando... ")
