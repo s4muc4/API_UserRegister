@@ -7,8 +7,8 @@ def hello():
     return "Hello from Python!"
 
 @app.route("/teste")
-def hello():
-    return "Hello from Python!"
+def teste():
+    return "Testando segunda rota :D  !"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
