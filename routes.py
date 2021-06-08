@@ -12,7 +12,7 @@ port = int(os.environ.get("PORT", 5000))
 
 print("Routes rodando... ")
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def main():
 	return {"message":"Hospedagem no Heroku 😎"}
 
