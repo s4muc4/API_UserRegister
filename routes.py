@@ -8,7 +8,7 @@ app = Flask("Teste")
 def helloWorld():
 	return {"Hello":"World"}
 
-@app.route("/", methods=["GET"])
+@app.route("/main", methods=["GET"])
 def helloWorld():
 	return {"message":"Hospedagem no Heroku 😎"}
 
