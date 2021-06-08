@@ -11,18 +11,14 @@ port = int(os.environ.get("PORT", 5000))
 
 
 print("Routes rodando... ")
-
-@app.route("/")
-def main():
-	return {"message":"Hospedagem no Heroku 😎"}
+print(os.environ.get)
 
 
-
-@app.route("/main", methods=["GET"])
+@app.route("/", methods=["GET"])
 def helloWorld():
-	return {"message":"Hospedagem no Heroku 😎"}
+	return {"message":"Hospedagem no Herokuu 😎"}
 
-@app.route("/register/user",methods=["POST"])
+""" @app.route("/register/user",methods=["POST"])
 def userRegister():
 
 	body= request.get_json()
@@ -48,6 +44,6 @@ def responseGenerate(status, message, contentName=False,  content=False):
 	if (contentName and content):
 		response[contentName] = content
 	
-	return response
+	return response """
 
 app.run(host='0.0.0.0', port=port)
