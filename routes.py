@@ -8,6 +8,10 @@ app = Flask("Teste")
 def helloWorld():
 	return {"Hello":"World"}
 
+@app.route("/", methods=["GET"])
+def helloWorld():
+	return {"message":"Hospedagem no Heroku 😎"}
+
 @app.route("/register/user",methods=["POST"])
 def userRegister():
 
