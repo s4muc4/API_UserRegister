@@ -4,7 +4,8 @@ from db import insertUser
 
 import os
 
-os.environ.get('PORT', 5000)
+
+print (os.environ['HOME'])
 
 app = Flask("Teste")
 
