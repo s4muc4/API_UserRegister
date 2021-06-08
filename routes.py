@@ -4,6 +4,10 @@ from db import insertUser
 
 app = Flask("Teste")
 
+@app.route("/", methods=["GET"])
+def main():
+	return {"message":"Hospedagem no Heroku 😎"}
+
 
 
 @app.route("/main", methods=["GET"])
