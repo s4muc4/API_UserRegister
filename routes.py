@@ -4,9 +4,7 @@ from db import insertUser
 
 app = Flask("Teste")
 
-@app.route("/helloWorld", methods=["GET"])
-def helloWorld():
-	return {"Hello":"World"}
+
 
 @app.route("/main", methods=["GET"])
 def helloWorld():
