@@ -10,9 +10,9 @@ def hello():
 
 @app.route("/", methods=["GET"])
 def helloWorld():
-	return "Testando PRIMEIRA rota :D  !"
+	return "Testando PRIMEIRA rota :D ! Insira /teste na URL"
 
-@app.route("/teste")
+@app.route("/teste", methods=["GET"])
 def teste():
     return "Testando segunda rota :D  !"
 
