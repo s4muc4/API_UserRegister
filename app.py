@@ -2,8 +2,7 @@ import os
 from flask import Flask, request
 app = Flask(__name__)
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
+
 
 """ @app.route("/")
 def hello():
@@ -11,7 +10,7 @@ def hello():
 
 @app.route("/", methods=["GET"])
 def helloWorld():
-	return {"message":"Hospedagem no Herokuu 😎"}
+	return "Testando PRIMEIRA rota :D  !"
 
 @app.route("/teste")
 def teste():
