@@ -1,10 +1,14 @@
 import os
-from flask import Flask
+from flask import Flask, request
 app = Flask(__name__)
 
-@app.route("/")
+""" @app.route("/")
 def hello():
-    return "Hello from Python!"
+    return "Hello from Python!" """
+
+@app.route("/", methods=["GET"])
+def helloWorld():
+	return {"message":"Hospedagem no Herokuu 😎"}
 
 @app.route("/teste")
 def teste():
