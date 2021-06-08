@@ -4,10 +4,11 @@ from db import insertUser
 
 import os
 
-
-print (os.environ['HOME'])
-
 app = Flask("Teste")
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port)
+
+
 
 print("Routes rodando... ")
 
